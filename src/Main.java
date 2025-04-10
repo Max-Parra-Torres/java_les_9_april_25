@@ -9,14 +9,14 @@ public class Main {
         String zone = "2";
 
 
-// Instance of Snelheidsboete
+        // Instance of Snelheidsboete
         Snelheidsboete snelheidsboete = new Snelheidsboete(naam, kenteken, gemetenSnelheid, maxSnelheid);
         snelheidsboete.setBedrag(snelheidsboete.bepaalBedrag(gemetenSnelheid, maxSnelheid));
         System.out.println(snelheidsboete.toString(
                 naam, kenteken, snelheidsboete.getBedrag(), gemetenSnelheid, maxSnelheid
         ));
 
-// Instance of ParkeerBoete
+        // Instance of ParkeerBoete
         ParkeerBoete parkeerBoete = new ParkeerBoete(naam, kenteken, zone);
         parkeerBoete.bepaalBedrag(zone);
         System.out.println(parkeerBoete.toString(
