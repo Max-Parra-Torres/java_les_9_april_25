@@ -2,27 +2,25 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // Instance of Snelheidsboete
+        String naam = "John Doe";
+        String kenteken = "123-AB-45";
+        int gemetenSnelheid = 130;
         int maxSnelheid = 80;
-        Snelheidsboete snelheidsboete = new Snelheidsboete("John Doe", "123-AB-45", 130, maxSnelheid);
-        double snelheidsboeteBedrag = snelheidsboete.bepaalBedrag(snelheidsboete.getGemetenSnelheid(), snelheidsboete.getMaximumSnelheid());
-        snelheidsboete.setBedrag(snelheidsboeteBedrag);
+        String zone = "2";
+
+
+// Instance of Snelheidsboete
+        Snelheidsboete snelheidsboete = new Snelheidsboete(naam, kenteken, gemetenSnelheid, maxSnelheid);
+        snelheidsboete.setBedrag(snelheidsboete.bepaalBedrag(gemetenSnelheid, maxSnelheid));
         System.out.println(snelheidsboete.toString(
-                snelheidsboete.getNaamDader(),
-                snelheidsboete.getKenteken(),
-                snelheidsboete.getBedrag(),
-                snelheidsboete.getGemetenSnelheid(),
-                snelheidsboete.getMaximumSnelheid()
+                naam, kenteken, snelheidsboete.getBedrag(), gemetenSnelheid, maxSnelheid
         ));
 
-        // Instance of ParkeerBoete
-        ParkeerBoete parkeerBoete = new ParkeerBoete("Jane Smith", "456-CD-78", "Zone 2");
-        parkeerBoete.bepaalBedrag(2);
+// Instance of ParkeerBoete
+        ParkeerBoete parkeerBoete = new ParkeerBoete(naam, kenteken, zone);
+        parkeerBoete.bepaalBedrag(zone);
         System.out.println(parkeerBoete.toString(
-                parkeerBoete.getNaamDader(),
-                parkeerBoete.getKenteken(),
-                parkeerBoete.getBedrag(),
-                parkeerBoete.getZone()
+                naam, kenteken, parkeerBoete.getBedrag(), zone
         ));
     }
 }

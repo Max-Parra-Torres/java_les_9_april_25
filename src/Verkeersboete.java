@@ -1,8 +1,8 @@
 public class Verkeersboete {
 
-    String naamDader;
-    String kenteken;
-    double bedrag;
+    private String naamDader;
+    private String kenteken;
+    private double bedrag;
 
 
 

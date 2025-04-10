@@ -1,7 +1,7 @@
 public class Snelheidsboete extends Verkeersboete {
 
-    int gemetenSnelheid;
-    int maximumSnelheid;
+    private int gemetenSnelheid;
+    private int maximumSnelheid;
 
     // Constructor
     public Snelheidsboete (String naam, String kenteken, int gemetenSnelheid, int maximumSnelheid) {

@@ -1,6 +1,6 @@
 public class ParkeerBoete extends Verkeersboete {
 
-    String zone;
+    private String zone;
 
 
     // Constructor
@@ -11,12 +11,12 @@ public class ParkeerBoete extends Verkeersboete {
         setZone(zone);
     }
 
-    public void bepaalBedrag(int zone) {
+    public void bepaalBedrag(String zone) {
         double bedrag;
 
-        if (zone == 1) {
+        if (zone.equals("1")) {
             bedrag = 60;
-        } else if (zone == 2) {
+        } else if (zone.equals("2")) {
             bedrag = 100;
         } else {
             bedrag = 180;
